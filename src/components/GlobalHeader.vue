@@ -1,28 +1,33 @@
-
 <template>
   <fixed-header :threshold="0">
     <header class="header">
       <div class="container">
         <div class="row flex-items">
           <div v-if="siteLogo">
-            <router-link to="/" title="Home"><img :src="siteLogo.url" :alt="siteName" /></router-link>
+            <router-link to="/" title="Home">
+              <img :src="siteLogo.url" :alt="siteName" />
+            </router-link>
             <span v-if="siteTagline" class="tagline">{{siteTagline}}</span>
           </div>
           <div v-else>{{siteName}}</div>
 
           <nav class="global-nav">
             <ul :if="sitemap != null">
-              <li v-for="node in sitemap" :key="node.pageID" v-if="node.visible.menu">
+              <li v-for="node in visibleSitemap" :key="node.pageID">
                 <router-link :to="node.path">{{node.menuText}}</router-link>
               </li>
             </ul>
           </nav>
 
-          <button class="hamburger btn btn-sec" @click="showMobileMenu = !showMobileMenu" title="View Menu">Menu</button>
+          <button
+            class="hamburger btn btn-sec"
+            @click="showMobileMenu = !showMobileMenu"
+            title="View Menu"
+          >Menu</button>
         </div>
         <nav class="mobile-nav" v-show="showMobileMenu">
           <ul :if="sitemap != null">
-            <li v-for="node in sitemap" :key="node.pageID" v-if="node.visible.menu">
+            <li v-for="node in visibleSitemap" :key="node.pageID">
               <router-link :to="node.path">{{node.menuText}}</router-link>
             </li>
           </ul>
@@ -33,9 +38,9 @@
 </template>
 
 <script>
-import Vue from 'vue'
+import Vue from "vue";
 import PreviewBar from "../agility/PreviewBar";
-import FixedHeader from 'vue-fixed-header';
+import FixedHeader from "vue-fixed-header";
 
 export default {
   data: function() {
@@ -46,6 +51,11 @@ export default {
       sitemap: null,
       showMobileMenu: false
     };
+  },
+  computed: {
+    visibleSitemap() {
+      return this.sitemap.filter(node => node.visible.menu);
+    }
   },
   components: {
     FixedHeader

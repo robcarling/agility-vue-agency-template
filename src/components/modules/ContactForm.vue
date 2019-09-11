@@ -5,31 +5,31 @@
             <p>{{item.fields.formIntroText}}</p>
             
             <div class="form-group">
-                <label for="">Name:</label>
-                <input type="text" />
+                <label for="fieldName">{{item.fields.formLabelName}}</label>
+                <input type="text" id="fieldName" />
             </div>
 
             <div class="form-group">
-                <label for="">Email:</label>
-                <input type="email" />
+                <label for="fieldEmail">{{item.fields.formLabelEmail}}</label>
+                <input type="email" id="fieldEmail" />
             </div>
 
             <div class="form-group">
-                <label for="">Phone:</label>
-                <input type="phone" />
+                <label for="fieldPhone">{{item.fields.formLabelPhone}}</label>
+                <input type="phone" id="fieldPhone" />
             </div>
 
             <div class="form-group">
-                <label for="">Company:</label>
-                <input type="text" />
+                <label for="fieldCompany">{{item.fields.formLabelCompany}}</label>
+                <input type="text" id="fieldCompany" />
             </div>
 
             <div class="form-group">
-                <label for="">Questions / Comments:</label>
-                <textarea rows="" cols=""></textarea>
+                <label for="fieldComments">{{item.fields.formLabelComments}}</label>
+                <textarea rows="" cols="" id="fieldComments"></textarea>
             </div>
 
-            <button type="submit" class="btn btn-md">Submit Form</button>
+            <button type="submit" class="btn btn-md">{{item.fields.formButtonLabel}}</button>
         </form>
 
     </section>

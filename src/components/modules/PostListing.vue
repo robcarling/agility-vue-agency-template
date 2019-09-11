@@ -6,7 +6,7 @@
       <div class="posts-list">
         <template v-for="post in posts.slice(0, item.fields.postCount)">
           <div class="post" :key="post.contentID">
-            <img v-if="post.image != null" :src="post.image.url" :alt="post.image.label" />
+            <router-link v-if="post.image != null" :to="post.to"><img :src="post.image.url" :alt="post.image.label" /></router-link>
             
             <div class="post-content">
               <h4>

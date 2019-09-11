@@ -17,8 +17,8 @@
 	--teal: #20c997;
 	--cyan: #75CAEB;
 	--white: #fff;
-	--gray: #717171;
-	--gray-light: #cccccc;
+	--gray: #c9c9c9;
+	--gray-light: #ebebeb;
 	--gray-dark: #494949;
 	--primary: #584b9f;
 	--primary-light: #7769c5;
@@ -91,7 +91,7 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 	line-height: 1.6;
-	color: var(--gray);
+	color: var(--gray-dark);
 	margin: 0;
     font-size: 15px;
     font-family: 'Nunito';
@@ -112,3 +112,10 @@ h3 { font-size: 1.75em; margin-bottom: 25px; }
 h4 { font-size: 1.25em; margin-bottom: 5px; }
 h5 { font-size: 1em; margin-bottom: 5px; }
 
+.site {
+	display: flex;
+  	min-height: 100vh;
+  	flex-direction: column;
+}
+
+.main { flex: 1; }

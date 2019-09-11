@@ -52,7 +52,7 @@
 }
 .btn-sec {
   background-color: var(--gray-light);
-  color: var(--gray);
+  color: var(--gray-dark);
   border-bottom: 2px solid var(--gray);
 }
 .btn-sec:hover {
@@ -79,6 +79,7 @@
 /* ---- Global Header ---- */
 .header {
   background: inherit;
+  min-height: 50px;
   padding: 12px 0px;
   background-color: #fff;
   -webkit-box-shadow: 0px 3px 4px -2px rgba(0, 0, 0, 0.4);
@@ -102,7 +103,7 @@
   display: block;
   margin-top: 3px;
   margin-right: 5px;
-  color: var(--gray-light);
+  color: var(--gray);
 }
 .header nav.global-nav {
   margin-top: 15px;
@@ -141,7 +142,7 @@
   text-transform: uppercase;
   font-weight: 600;
   font-size: 1em;
-  color: var(--gray);
+  color: var(--gray-dark);
 }
 .header a:hover {
   text-decoration: none;
@@ -272,6 +273,24 @@
 .section-news .posts-list .post h4 {
   margin-top: 10px;
 }
+.section-post-details .post-title {
+  background-color: var(--gray-light);
+  padding: 25px 0;
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--gray);
+  border-top: 1px solid var(--gray);
+}
+.section-post-details .post-title h1 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.section-post-details .post-image {
+  width: 100%;
+}
+.section-post-details .post-content {
+  margin: 20px 0 30px 0;
+}
 /* ---- Contact Form ---- */
 .section-contact-form form {
   background-color: #f9f9f9;
@@ -369,8 +388,8 @@
   --teal: #20c997;
   --cyan: #75CAEB;
   --white: #fff;
-  --gray: #717171;
-  --gray-light: #cccccc;
+  --gray: #c9c9c9;
+  --gray-light: #ebebeb;
   --gray-dark: #494949;
   --primary: #584b9f;
   --primary-light: #7769c5;
@@ -524,7 +543,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  color: var(--gray);
+  color: var(--gray-dark);
   margin: 0;
   font-size: 15px;
   font-family: 'Nunito';
@@ -568,4 +587,12 @@ h4 {
 h5 {
   font-size: 1em;
   margin-bottom: 5px;
+}
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.main {
+  flex: 1;
 }

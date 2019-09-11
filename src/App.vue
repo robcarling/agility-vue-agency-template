@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="site">
     <vue-progress-bar></vue-progress-bar>
     <GlobalHeader />
     <PreviewBar />

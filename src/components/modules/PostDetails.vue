@@ -1,12 +1,17 @@
 <template>
-  <section class="post-details">
+  <section class="section-post-details">
+    <div class="post-title">
+      <div class="container">
+        <h1>{{dynamicPageItem.fields.title}}</h1>
+      </div>
+    </div>
     <div class="container">
       <div class="post">
-        <h1>{{dynamicPageItem.fields.title}}</h1>
         <img
           v-if="dynamicPageItem.fields.image "
           :src="dynamicPageItem.fields.image.url + '?w=860'"
           :alt="dynamicPageItem.fields.image.label"
+          class="post-image"
         />
         <div class="post-content" v-html="dynamicPageItem.fields.details"></div>
       </div>
