@@ -1,7 +1,7 @@
 
 <template>
   <fixed-header :threshold="0">
-    <header class="header" >
+    <header class="header">
       <div class="container">
         <div class="row flex-items">
           <div v-if="siteLogo">
@@ -17,7 +17,16 @@
               </li>
             </ul>
           </nav>
+
+          <button class="hamburger btn btn-sec" @click="showMobileMenu = !showMobileMenu" title="View Menu">Menu</button>
         </div>
+        <nav class="mobile-nav" v-show="showMobileMenu">
+          <ul :if="sitemap != null">
+            <li v-for="node in sitemap" :key="node.pageID" v-if="node.visible.menu">
+              <router-link :to="node.path">{{node.menuText}}</router-link>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
   </fixed-header>
@@ -34,7 +43,8 @@ export default {
       siteName: null,
       siteLogo: null,
       siteTagline: null,
-      sitemap: null
+      sitemap: null,
+      showMobileMenu: false
     };
   },
   components: {

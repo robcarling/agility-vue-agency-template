@@ -44,7 +44,7 @@
   font-family: 'Poppins';
 }
 .btn:hover {
-  background-color: var(--primary-light);
+  background-color: var(--primary-dark);
   color: #fff;
 }
 .btn i {
@@ -52,12 +52,12 @@
 }
 .btn-sec {
   background-color: var(--gray-light);
-  color: var(--gray-dark);
-  border-bottom: 2px solid var(--gray-dark);
+  color: var(--gray);
+  border-bottom: 2px solid var(--gray);
 }
 .btn-sec:hover {
-  background-color: #E5E5E5;
-  color: #110F24;
+  background-color: var(--gray);
+  color: #fff;
 }
 .btn-sm {
   padding: 6px 10px;
@@ -89,7 +89,7 @@
   position: fixed;
   left: 0;
   top: 0;
-  width: 100vw;
+  width: 100%;
   transition: background-color 300ms ease-out !important;
 }
 .header img {
@@ -106,6 +106,21 @@
 }
 .header nav.global-nav {
   margin-top: 15px;
+}
+.header nav.mobile-nav li {
+  display: block;
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
+  border-bottom: 1px solid #dfdfdf;
+}
+.header nav.mobile-nav li:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.header .hamburger {
+  display: none;
+  outline: none;
 }
 .header ul {
   list-style: none;
@@ -290,6 +305,52 @@
 /* Extra Large Break */
 /* Large Break */
 /* Medium Break */
+@media (max-width: 700px) {
+  .flex-items {
+    flex-wrap: wrap;
+  }
+  .header .row nav.global-nav {
+    display: none;
+  }
+  .header .row .hamburger {
+    display: block;
+    align-self: flex-start;
+    margin: auto 0;
+    cursor: pointer;
+  }
+  .header nav.mobile-nav {
+    display: block;
+  }
+  .section-features .features-list .feature {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .section-features .features-list .feature:last-child {
+    margin-bottom: 10px;
+  }
+  .section-news .posts-list .post {
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 0 15px;
+  }
+  .section-news .posts-list .post:last-child {
+    margin-bottom: 10px;
+  }
+  .body-columns {
+    flex-wrap: wrap;
+  }
+  .body-columns .main-column {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .body-columns .side-column {
+    width: 100%;
+    text-align: center;
+  }
+  .section-logo-listing .logo-list .logo {
+    width: 30%;
+  }
+}
 /* Small Break */
 :root {
   --blue: #158CBA;
@@ -487,6 +548,7 @@ h5.h6 {
 h1 {
   font-size: 2.5em;
   margin-bottom: 35px;
+  line-height: 1.25em;
 }
 h2 {
   font-size: 2em;

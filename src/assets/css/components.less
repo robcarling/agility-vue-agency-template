@@ -51,16 +51,16 @@
     padding: 8px 15px; font-size: .90em;
     font-family: 'Poppins';
 
-    &:hover { background-color: var(--primary-light); color: #fff; }
+    &:hover { background-color: var(--primary-dark); color: #fff; }
     i { margin-right: 3px; }
 }
 
 .btn-sec { 
     background-color: var(--gray-light); 
-    color: var(--gray-dark); 
-    border-bottom: 2px solid var(--gray-dark); 
+    color: var(--gray); 
+    border-bottom: 2px solid var(--gray); 
     
-    &:hover { background-color: #E5E5E5; color: #110F24; }
+    &:hover { background-color: var(--gray); color: #fff; }
 }
 
 .btn-sm { padding: 6px 10px; font-size: .85em; }
@@ -83,7 +83,7 @@
         position: fixed;
         left: 0;
         top: 0;
-        width: 100vw;
+        width: 100%;
         transition: background-color 300ms ease-out !important;
     }
   
@@ -103,6 +103,27 @@
 
     nav.global-nav {
         margin-top: 15px;
+    }
+
+    nav.mobile-nav {
+
+        li {
+            display: block;
+            margin: 0;
+            padding: 10px 0;
+            text-align: center;
+            border-bottom: 1px solid #dfdfdf;
+
+            &:last-child {
+                padding-bottom: 0;
+                border-bottom: none;
+            }
+        }
+    }
+
+    .hamburger {
+        display: none;
+        outline: none;
     }
 
     ul {

@@ -18,13 +18,84 @@
 
 /* Medium Break */
 @media (max-width: 700px) {
+  .flex-items {
+    flex-wrap: wrap;
+  }
 
+  .header {
+    .row {
+      nav.global-nav {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+        align-self: flex-start;
+        margin: auto 0;
+        cursor: pointer;
+      }
+    }
+
+    nav.mobile-nav {
+      display: block;
+    }
+  }
+
+  .section-features {
+    .features-list {
+      .feature {
+        width: 100%;
+        margin-bottom: 30px;
+
+        &:last-child {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .section-news {
+    .posts-list {
+      .post {
+        width: 100%;
+        margin-bottom: 30px;
+        padding: 0 15px;
+
+        &:last-child {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .body-columns {
+    flex-wrap: wrap;
+
+    .main-column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .side-column {
+        width: 100%;
+        text-align: center;
+    }
+  }
+
+  .section-logo-listing {
+
+    .logo-list {
+
+        .logo {
+            width: 30%;
+        }
+    }
+}
 
 }
 
 /* Small Break */
 @media (max-width: 500px) {
-
+  
 
 }
 
